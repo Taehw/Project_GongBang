@@ -44,7 +44,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item ">
+                <div class="carousel-item">
                     <div class="d-flex justify-content-center">
                         <img src="/Project.GongBang/img/room/won/room2.png" alt="방 2" data-toggle="modal" data-target="#roomModal" data-room="2">
                         <div class="room-text">
@@ -91,45 +91,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        const roomData = {
-            1: {
-                images: [
-                    '/Project.GongBang/img/room/won/room1-1.png',
-                    '/Project.GongBang/img/room/won/room1-2.png',
-                    '/Project.GongBang/img/room/won/room1-3.png',
-                ],
-                description: '방 1의 상세 정보입니다.'
-            },
-            2: {
-                images: [
-                '/Project.GongBang/img/room/won/room2-1.png',
-                '/Project.GongBang/img/room/won/room2-2.png',
-                '/Project.GongBang/img/room/won/room2-3.png',
-                ],
-                description: '방 2의 상세 정보입니다.'
-            }
-        };
-
-        $('#roomModal').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget); // 버튼을 누른 요소
-            var room = button.data('room'); // data-room 속성에서 정보 추출
-
-            var modal = $(this);
-            var modalImages = modal.find('#modalImages');
-            var modalDescription = modal.find('#modalDescription');
-
-            var data = roomData[room];
-
-            modalImages.empty(); // 이전 이미지 제거
-
-            data.images.forEach(function(src) {
-                var img = $('<img>').attr('src', src).addClass('img-fluid m-1').css('width', '99%');
-                modalImages.append(img);
-            });
-
-            modalDescription.text(data.description);
-        });
-    </script>
+    <script src="/Project.GongBang/js/wonhyuk.js"></script>
 </body>
 </html>

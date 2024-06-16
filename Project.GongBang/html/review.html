@@ -11,117 +11,55 @@
     <link rel="stylesheet" href="/Project.GongBang/css/review.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <h1>리뷰 페이지</h1>
-        <div class="list-group" id="reviewList">
-            <!-- 리뷰 목록이 여기에 표시됩니다. -->
-        </div>
-        <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#writeReviewModal">리뷰 작성하기</button>
-        <a href="/Project.GongBang/html/main.html" class="btn btn-secondary mt-3">목록으로 돌아가기</a>
+    <div class="container">
+        <h1>리뷰 작성</h1>
+        <form id="reviewForm">
+            <div class="form-group">
+                <label for="reviewTitle">리뷰 제목</label>
+                <input type="text" class="form-control" id="reviewTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="reviewContent">리뷰 내용</label>
+                <textarea class="form-control" id="reviewContent" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="agentSelect">중개사 선택</label>
+                <select class="form-control" id="agentSelect" required>
+                    <option value="이정현">이정현</option>
+                    <option value="김태화">김태화</option>
+                    <option value="최원혁">최원혁</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">리뷰 저장</button>
+            <button class="btn btn-primary" onclick="goback()">뒤로 가기</button>
+        </form>
+        <hr>
+        <h2>리뷰 목록</h2>
+        <div class="list-group" id="reviewList"></div>
     </div>
 
-    <!-- 리뷰 작성 모달 -->
-    <div class="modal fade" id="writeReviewModal" tabindex="-1" aria-labelledby="writeReviewModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="writeReviewModalLabel">리뷰 작성하기</h5>
+                    <h5 class="modal-title" id="reviewModalLabel">리뷰 제목</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="reviewForm">
-                        <div class="form-group">
-                            <label for="reviewTitle">제목</label>
-                            <input type="text" class="form-control" id="reviewTitle" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="reviewContent">내용</label>
-                            <textarea class="form-control" id="reviewContent" rows="3" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">저장하기</button>
-                    </form>
+                    <p id="modalReviewContent"></p>
+                    <p class="text-muted" id="modalReviewAgent"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        // 페이지 로드 시 로컬 저장소에서 리뷰를 불러오기
-        document.addEventListener('DOMContentLoaded', function() {
-            loadReviews();
-        });
-
-        // 리뷰 저장하기
-        document.getElementById('reviewForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const title = document.getElementById('reviewTitle').value;
-            const content = document.getElementById('reviewContent').value;
-
-            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-            const newReview = {
-                id: 'reviewModal' + (reviews.length + 1),
-                title: title,
-                content: content
-            };
-            reviews.push(newReview);
-            localStorage.setItem('reviews', JSON.stringify(reviews));
-
-            addReviewToList(newReview);
-            addReviewModal(newReview);
-
-            $('#writeReviewModal').modal('hide');
-            document.getElementById('reviewForm').reset();
-        });
-
-        // 리뷰 목록에 추가하기
-        function addReviewToList(review) {
-            const newReview = document.createElement('a');
-            newReview.href = '#';
-            newReview.classList.add('list-group-item', 'list-group-item-action');
-            newReview.setAttribute('data-toggle', 'modal');
-            newReview.setAttribute('data-target', `#${review.id}`);
-            newReview.textContent = review.title;
-            document.getElementById('reviewList').appendChild(newReview);
-        }
-
-        // 새로운 리뷰 모달 생성하기
-        function addReviewModal(review) {
-            const newReviewModal = `
-                <div class="modal fade" id="${review.id}" tabindex="-1" aria-labelledby="${review.id}Label" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="${review.id}Label">${review.title}</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p>${review.content}</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-            document.body.insertAdjacentHTML('beforeend', newReviewModal);
-        }
-
-        // 로컬 저장소에서 리뷰 불러오기
-        function loadReviews() {
-            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-            reviews.forEach(review => {
-                addReviewToList(review);
-                addReviewModal(review);
-            });
-        }
-    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/Project.GongBang/js/review.js"></script>
 </body>
 </html>

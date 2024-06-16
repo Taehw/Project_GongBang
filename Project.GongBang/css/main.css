@@ -4,30 +4,32 @@ body {
     padding: 0;
     background-size: cover;
 }
+
 .container {
-    
     /* 폰트 지정 */
     font-family: "Dongle", sans-serif;
     font-size: 40px;
     font-weight: 400;
     font-style: normal;
-
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8); /* Make the background slightly transparent */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .container h1 {
     text-align: center;
     color: #333333;
     margin-bottom: 40px;
 }
+
 .agent-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 .agent {
     width: 30%;
     margin-bottom: 30px;
@@ -38,36 +40,36 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
+
 .agent:hover {
     transform: translateY(-30px);
 }
+
 .agent img {
-    width: 100%;
+    width: 50%;
     height: auto;
     border-radius: 10px;
 }
-.agent img{
-    width: 50%;
-    height: auto;
-}
+
 .info {
     margin-top: 20px;
 }
+
 .info h2 {
     font-size: 40px;
     color: #333333;
     margin-bottom: 10px;
 }
+
 .info p {
     font-size: 40px;
     color: #777777;
     margin: 5px 0;
 }
 
-u, a{
+u, a {
     text-decoration: none;
 }
-
 
 #first_box_img {
     text-align: center;
@@ -75,4 +77,19 @@ u, a{
     background-color: rgba(255, 255, 255, 0.8); /* 배경을 약간 투명하게 설정 */
     padding: 10px;
     border-radius: 10px;
+}
+
+.room-text {
+    margin-left: 20px;
+}
+
+img {
+    max-width: 300px;
+    height: auto;
+}
+
+#modalImages img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }

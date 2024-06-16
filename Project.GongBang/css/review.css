@@ -4,3 +4,11 @@ body, h1, .modal-title, .btn {
     font-weight: 400;
     font-style: normal;
 }
+
+select.form-control {
+
+    font-size: 1.2em;
+}
+input#reviewTitle, textarea#reviewContent {
+    font-size: 0.8em; 
+}
