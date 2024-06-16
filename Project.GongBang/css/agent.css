@@ -1,3 +1,9 @@
+*,html{
+    font-family: "Dongle", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+}
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     display: flex;
@@ -12,10 +18,7 @@ body {
 }
 
 .container {
-    font-family: "Dongle", sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    font-style: normal;
+
     
     text-align: center;
     width: 80%;
@@ -104,6 +107,8 @@ h1 {
     mask-repeat: no-repeat;
 }
 
+
+
 .carousel-control-prev-icon::after {
     mask-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" fill="%23fff"><path d="M0 4l4-4v3h4v2h-4v3z" /></svg>');
 }
@@ -132,6 +137,9 @@ h1 {
 .carousel-item img{
     width: 50%;
     height: auto;
+    border-radius: 5px; 
+    box-shadow: rgba(100, 100, 100, 0.2) 0px 0px 29px 0px;
+
 }
 .room-text{
     padding-left: 30px;
