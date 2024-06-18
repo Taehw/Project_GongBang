@@ -5,7 +5,6 @@ const roomData = {
             '/Project.GongBang/img/room/hyun/room1-2.png',
             '/Project.GongBang/img/room/hyun/room1-3.png'
         ],
-        description: '방 3의 상세 정보입니다.'
     },
     2: {
         images: [
@@ -13,7 +12,6 @@ const roomData = {
             '/Project.GongBang/img/room/hyun/room2-2.png',
             '/Project.GongBang/img/room/hyun/room2-3.png'
         ],
-        description: '방 4의 상세 정보입니다.'
     }
 };
 

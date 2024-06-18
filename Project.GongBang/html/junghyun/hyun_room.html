@@ -15,8 +15,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">이정현</a>
         <div class="contact-info">
-            <p>중개사 위치: 서울 종로구 삼일대로 30길 23</p>
-            <p>전화번호:010-xxxx-xxxx</p>
+            <p>중개사 위치 : 충북 청주시 서원구 1순환로 741</p>
+            <p>전화번호 : 010-xxxx-xxxx</p>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -42,9 +42,10 @@
                     <div class="d-flex justify-content-center">
                         <img src="/Project.GongBang/img/room/hyun/room1.png" alt="방 1" data-toggle="modal" data-target="#roomModal" data-room="1">
                         <div class="room-text">
-                            <h2>방 3</h2>
-                            <p>가격: 3억원</p>
-                            <p>위치: 서울시 용산구</p>
+                            <h2>첫 번째 방</h2>
+                            <p>가격 : 300만원</p>
+                            <p>위치 : 청주시 서원구</p>
+                            <p>사진을 눌러보시면 좀 더 정확한 정보를 알 수 있습니다!</p>
                         </div>
                     </div>
                 </div>
@@ -52,9 +53,10 @@
                     <div class="d-flex justify-content-center">
                         <img src="/Project.GongBang/img/room/hyun/room2.png" alt="방 2" data-toggle="modal" data-target="#roomModal" data-room="2">
                         <div class="room-text">
-                            <h2>방 4</h2>
-                            <p>가격: 4억원</p>
-                            <p>위치: 서울시 종로구</p>
+                            <h2>두 번째 방</h2>
+                            <p>가격 : 200만원</p>
+                            <p>위치 : 청주시 서원구</p>
+                            <p>사진을 눌러보시면 좀 더 정확한 정보를 알 수 있습니다!</p>
                         </div>
                     </div>
                 </div>
@@ -76,21 +78,44 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">방 상세 정보</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">방 상세 정보</h5> <!-- Updated title -->
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div id="modalImages" class="d-flex flex-wrap"></div>
-                    <p id="modalDescription">추가적인 방 정보를 여기에 표시합니다.</p>
+                    <h4>&nbsp;&nbsp;상세 위치 및 가격 정보</h4>
+                    <p><span class="arrow"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶</span> 충청북도 청주시 서원구 개신동 708</p>
+                    <p><span class="arrow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶</span> 월세 : 300 / 30</p>
+                    <p><span class="arrow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶</span> 관리비 : 4만원</p>
                 </div>
+                <div id="modalOptions" class="mt-3">
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;옵션 정보</h4>
+                    <div class="d-flex justify-content-center">
+                        <span class="mr-3"><img src="/Project.GongBang/img/etc/침대.png" style="width: 50px; height: auto;"><br> 침대</span>
+                        <span class="mr-3"><img src="/Project.GongBang/img/etc/에어컨.png" style="width: 50px; height: auto;"><br> 에어컨</span>
+                        <span class="mr-3"><img src="/Project.GongBang/img/etc/씽크대.png" style="width: 50px; height: auto;"><br> 씽크대</span>
+                        <span class="mr-3"><img src="/Project.GongBang/img/etc/수납장.png" style="width: 50px; height: auto;"><br> 수납장</span>
+                        <span class="mr-3"><img src="/Project.GongBang/img/etc/세탁기.png" style="width: 50px; height: auto;"><br> 세탁기</span>
+                    </div>
+                </div>
+                <hr>
+                <div id="modalDescription" class="mt-3">
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;상세 설명</h4>
+                    <p><span class="arrow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶</span> 기존 원룸 대비 퀄리티가 정말 좋은 원룸이에요!</p>
+                    <p><span class="arrow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶</span> 정말 관리 잘된 원룸이에요!</p>
+                    <p><span class="arrow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶</span> 방 내부 공간, 화장실 또한 다른 원룸에 비해 넓게 빠졌어요!</p>
+                    <p><span class="arrow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶</span> 귀갓길 걱정 없는 안전한 주거지역에 위치해 있어요!</p>
+                </div>                    
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
                 </div>
             </div>
         </div>
     </div>
+    
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
