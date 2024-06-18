@@ -1,0 +1,9 @@
+#modalDescription p {
+    text-indent: 20px; /* 원하는 만큼 안쪽으로 띄우기 */
+    position: relative;
+}
+
+#modalDescription .arrow {
+    position: absolute;
+    left: -20px; /* 화살표 위치 조정 */
+}
