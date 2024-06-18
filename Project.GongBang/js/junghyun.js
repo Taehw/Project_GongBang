@@ -23,16 +23,16 @@ const roomData = {
             '/Project.GongBang/img/room/hyun/room2-2.png',
             '/Project.GongBang/img/room/hyun/room2-3.png'
         ],
-        description: '방 설명 예시입니다.',
-        address: '충청북도 청주시 서원구 개신동 709',
-        monthlyRent: '400 / 40',
-        managementFee: '5만원',
+        description: '복층 구조라 넓은 공간을 활용할 수 있어요! 넓은 창문으로 채광이 좋아요! 리모델링 되어 있어서 집상태 너무 좋아요! 주변에 편의점, 식당, 카페 등이 있어 생활하기 편리해요!',
+        address: '충청북도 청주시 서원구 개신동 640',
+        monthlyRent: '350 / 35',
+        managementFee: '6만원',
         options: [
             { name: '침대', icon: '/Project.GongBang/img/etc/침대.png' },
             { name: '에어컨', icon: '/Project.GongBang/img/etc/에어컨.png' },
             { name: '씽크대', icon: '/Project.GongBang/img/etc/씽크대.png' },
             { name: '수납장', icon: '/Project.GongBang/img/etc/수납장.png' },
-            { name: '세탁기', icon: '/Project.GongBang/img/etc/세탁기.png' }
+            { name: '전자레인지', icon: '/Project.GongBang/img/etc/전자레인지.png' }
         ]
     }
 };

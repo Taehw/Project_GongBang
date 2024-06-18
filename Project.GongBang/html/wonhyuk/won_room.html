@@ -15,8 +15,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">최원혁</a>
         <div class="contact-info">
-            <P>서울 마포구 양화로 156 LG팰리스 지하1층 </P>
-            <p>전화번호:010-xxxx-xxxx</p>
+            <P>중개사 위치 : 충북 청주시 상당구 사직대로 374</P>
+            <p>전화번호 : 010-xxxx-xxxx</p>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -42,9 +42,9 @@
                     <div class="d-flex justify-content-center">
                         <img src="/Project.GongBang/img/room/won/room1.png" alt="방 1" data-toggle="modal" data-target="#roomModal" data-room="1">
                         <div class="room-text">
-                            <h2>방 1</h2>
-                            <p>가격: 3억원</p>
-                            <p>위치: 서울시 용산구</p>
+                            <h2>첫 번째 방</h2>
+                            <p>가격 : 400만원</p>
+                            <p>위치 : 청주시 상당구</p>
                         </div>
                     </div>
                 </div>
@@ -52,9 +52,9 @@
                     <div class="d-flex justify-content-center">
                         <img src="/Project.GongBang/img/room/won/room2.png" alt="방 2" data-toggle="modal" data-target="#roomModal" data-room="2">
                         <div class="room-text">
-                            <h2>방 2</h2>
-                            <p>가격: 4억원</p>
-                            <p>위치: 서울시 종로구</p>
+                            <h2>두 번째 방</h2>
+                            <p>가격 : 300만원</p>
+                            <p>위치 : 청주시 상당구</p>
                         </div>
                     </div>
                 </div>
@@ -76,15 +76,26 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">방 상세 정보</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">방 상세 정보</h5> 
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div id="modalImages" class="d-flex flex-wrap"></div>
-                    <p id="modalDescription">추가적인 방 정보를 여기에 표시합니다.</p>
+                    <h4>&nbsp;&nbsp;상세 위치 및 가격 정보</h4>
+                    <p id="modalAddress"><span class="arrow"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ 충청북도 청주시 상당구 서운동 59-1</p>
+                    <p id="modalMonthlyRent"><span class="arrow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶</span> 월세 : 400 / 20</p>
+                    <p id="modalManagementFee"><span class="arrow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶</span> 관리비 : 5만원</p>
                 </div>
+                <div id="modalOptions" class="mt-3">
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;옵션 정보</h4>
+                    <div class="d-flex justify-content-center">
+                    </div>
+                </div>
+                <hr>
+                <div id="modalDescription" class="mt-3">
+                </div>                    
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
                 </div>
